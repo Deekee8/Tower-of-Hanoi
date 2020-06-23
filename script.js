@@ -24,35 +24,45 @@ const tower3 = document.getElementById('tower3')
 tower1.addEventListener('click', function(evt) {
     let clickedTower = event.currentTarget
     // let pickUpDisc = document.getElementById('tower1').lastElementChild
-    if (currentMode === 'put down disc') {
-        pickedUpDisc = document.getElementById('tower1').lastElementChild
+    switch (currentMode) {
+        case 'put down disc':
+            pickedUpDisc = document.getElementById('tower1').lastElementChild;
+            break;
+        case 'pick up disc':
+            if (pickedUpDisc.clientWidth < clickedTower.lastElementChild.clientWidth) {
+            clickedTower.append(pickedUpDisc);
+            }
+            break;
     }
-    else if (currentMode === 'pick up disc') {
-        clickedTower.append(pickedUpDisc)
-    }
+    console.log(clickedTower.lastElementChild.clientWidth)
 })
+
 
 tower2.addEventListener('click', function(evt) {
     let clickedTower = event.currentTarget
     // let pickUpDisc = document.getElementById('tower2').lastElementChild
-    
-
-    if (currentMode === 'put down disc') {
-        pickedUpDisc = document.getElementById('tower2').lastElementChild
-    }
-    else if (currentMode === 'pick up disc') {
-        clickedTower.append(pickedUpDisc)
-    }
+    switch (currentMode) {
+        case 'put down disc':
+            pickedUpDisc = document.getElementById('tower2').lastElementChild;
+            break;
+        case 'pick up disc':
+            clickedTower.append(pickedUpDisc);
+            break;
+    } 
 })
+    
+    
 
 tower3.addEventListener('click', function(evt) {
     let clickedTower = event.currentTarget
     // let pickUpDisc = document.getElementById('tower3').lastElementChild
-    if (currentMode === 'put down disc') {
-        pickedUpDisc = document.getElementById('tower3').lastElementChild
-    }
-    else if (currentMode === 'pick up disc') {
-        clickedTower.append(pickedUpDisc)
+    switch (currentMode) {
+        case 'put down disc':
+            pickedUpDisc = document.getElementById('tower3').lastElementChild;
+            break;
+        case 'pick up disc':
+            clickedTower.append(pickedUpDisc);
+            break;
     }
 })
 
