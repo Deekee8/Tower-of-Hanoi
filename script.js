@@ -1,11 +1,11 @@
-let currentMode = 'pick up disc' 
-let nextMode = 'put down disc'
+let currentMode = 'put down disc' 
+let nextMode = 'pick up disc'
 
 const gameMode = function() {  // alternate game modes
-    if (currentMode === 'pick up disc') {
-        nextMode = 'put down disc'
-    } else {
+    if (currentMode === 'put down disc') {
         nextMode = 'pick up disc'
+    } else {
+        nextMode = 'put down disc'
     }
 
     currentMode = nextMode
@@ -23,18 +23,42 @@ const tower3 = document.getElementById('tower3')
 
 tower1.addEventListener('click', function(evt) {
     let clickedTower = event.currentTarget
-    let pickUpDisc = document.getElementById('tower1').lastElementChild
-    console.log(pickUpDisc) 
+    // let pickUpDisc = document.getElementById('tower1').lastElementChild
+    if (currentMode === 'put down disc') {
+        pickedUpDisc = document.getElementById('tower1').lastElementChild
+    }
+    else if (currentMode === 'pick up disc') {
+        clickedTower.append(pickedUpDisc)
+    }
 })
 
 tower2.addEventListener('click', function(evt) {
     let clickedTower = event.currentTarget
-    let pickUpDisc = document.getElementById('tower2').lastElementChild
-    console.log(pickUpDisc)
+    // let pickUpDisc = document.getElementById('tower2').lastElementChild
+    
+
+    if (currentMode === 'put down disc') {
+        pickedUpDisc = document.getElementById('tower2').lastElementChild
+    }
+    else if (currentMode === 'pick up disc') {
+        clickedTower.append(pickedUpDisc)
+    }
 })
 
 tower3.addEventListener('click', function(evt) {
     let clickedTower = event.currentTarget
-    let pickUpDisc = document.getElementById('tower3').lastElementChild
-    console.log(pickUpDisc)
+    // let pickUpDisc = document.getElementById('tower3').lastElementChild
+    if (currentMode === 'put down disc') {
+        pickedUpDisc = document.getElementById('tower3').lastElementChild
+    }
+    else if (currentMode === 'pick up disc') {
+        clickedTower.append(pickedUpDisc)
+    }
 })
+
+
+
+
+
+
+
