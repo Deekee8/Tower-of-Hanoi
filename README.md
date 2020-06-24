@@ -1,17 +1,10 @@
-if current mode === put down disc
-    clicking on a tower will point to the top disc in that tower and store it in a picked up disc variable
-
-    clicking on another tower will prepend that picked up disc only if it's smaller than any disc that is already on top of that tower
-
-
-    if (currentMode === put down disc) {
-        pickedUpDisc = document.getElementById('tower1').lastElementChild
-    }
-    else if (currentMode === pick up disc) {
-        clickedTower.prepend(pickedUpDisc)
-    }
-
-If picked up disk is wider than disc on top of tower, do nothing.
-    if (pickedUpDisc.style.width > clickedTower.lastElementChild.style.width) {
-        break
-    }
+1. First create three towers (html markup).
+2. Next create divs for disc.
+3. Style disc so that we can see visible representation on the page.
+4. Style main div for gameboard with a background color as well. 
+5. Add click handlers to each of the towers to listen for each move.
+6. Put clickhandler on entire game board, to keep track of the current game mode the game is in.
+7. Create variable in each tower to pick up the top disc
+8. Create a function that move disc from one tower to another 
+9. Create rule that one larger disc can not be placed on a smaller disc
+10. Create winning condition 

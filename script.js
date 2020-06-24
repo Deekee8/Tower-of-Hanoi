@@ -29,12 +29,14 @@ tower1.addEventListener('click', function(evt) {
             pickedUpDisc = document.getElementById('tower1').lastElementChild;
             break;
         case 'pick up disc':
-            if (pickedUpDisc.clientWidth < clickedTower.lastElementChild.clientWidth) {
-            clickedTower.append(pickedUpDisc);
+            if (clickedTower.lastElementChild === null) {
+                clickedTower.append(pickedUpDisc);
+            }
+            else if (pickedUpDisc.clientWidth < clickedTower.lastElementChild.clientWidth) {
+                clickedTower.append(pickedUpDisc);
             }
             break;
     }
-    console.log(clickedTower.lastElementChild.clientWidth)
 })
 
 
@@ -46,7 +48,12 @@ tower2.addEventListener('click', function(evt) {
             pickedUpDisc = document.getElementById('tower2').lastElementChild;
             break;
         case 'pick up disc':
-            clickedTower.append(pickedUpDisc);
+            if (clickedTower.lastElementChild === null) {
+                clickedTower.append(pickedUpDisc);
+            }
+            else if (pickedUpDisc.clientWidth < clickedTower.lastElementChild.clientWidth) {
+                clickedTower.append(pickedUpDisc);
+            }
             break;
     } 
 })
@@ -61,11 +68,19 @@ tower3.addEventListener('click', function(evt) {
             pickedUpDisc = document.getElementById('tower3').lastElementChild;
             break;
         case 'pick up disc':
-            clickedTower.append(pickedUpDisc);
+            if (clickedTower.lastElementChild === null) {
+                clickedTower.append(pickedUpDisc);
+            }
+            else if (pickedUpDisc.clientWidth < clickedTower.lastElementChild.clientWidth) {
+                clickedTower.append(pickedUpDisc);
+            }
             break;
     }
+    let win = clickedTower.childElementCount
+    if(win === 4){
+        alert("You Won!")
+    }
 })
-
 
 
 
