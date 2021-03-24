@@ -1,14 +1,22 @@
-https://dequanmitchell.gitlab.io/tower-of-hanoi
+# Welcome to Tower-of-Hanoi 👋
+[![Twitter: devDeQuan](https://img.shields.io/twitter/follow/devDeQuan.svg?style=social)](https://twitter.com/devDeQuan)
 
-Partner is Dessance Chandler
+> Tower of Hanoi game made with vanilla JavaScript. I wrote this as part of Q1 of Kenzie Academy's Software Engineering Certification program.
 
-1. First create three towers (html markup).
-2. Next create divs for disc.
-3. Style disc so that we can see visible representation on the page.
-4. Style main div for gameboard with a background color as well. 
-5. Add click handlers to each of the towers to listen for each move.
-6. Put clickhandler on entire game board, to keep track of the current game mode the game is in.
-7. Create variable in each tower to pick up the top disc
-8. Create a function that move disc from one tower to another 
-9. Create rule that one larger disc can not be placed on a smaller disc
-10. Create winning condition 
+### ✨ [Demo](https://deekee8.github.io/Tower-of-Hanoi/)
+
+## Author
+
+👤 **DeQuan Mitchell**
+
+* Twitter: [@devDeQuan](https://twitter.com/devDeQuan)
+* Github: [@Deekee8](https://github.com/Deekee8)
+* LinkedIn: [@dequanmitchell](https://linkedin.com/in/dequanmitchell)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
